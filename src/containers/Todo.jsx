@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 // Components
 import SingleTodo from './Todo/SingleTodo'
+import {
+  Route
+} from 'react-router-dom'
 
 export default class Todo extends Component {
   state = {
@@ -11,10 +14,9 @@ export default class Todo extends Component {
     ],
     newTodo: 'ini new todo'
   }
-  
+
   delete = (id) => {
-    const {todos} = this.state
-    const newTodos = todos.filter(todo => todo.id !== id)    
+    const newTodos = this.state.todos.filter(todo => todo.id !== id)    
     this.setState({
       todos: newTodos
     })
@@ -38,6 +40,8 @@ export default class Todo extends Component {
 
     return (
       <div>
+        <h2>{this.props.name}</h2>
+        <Route exact path="/todo/easter" component={() => <h1>welcome to oasis</h1>} />
         <h1>TodoList</h1>
         <input type="text" value={newTodo} name="newTodo" onChange={this.handleChange.bind(this)}></input>
         <button onClick={this.addNewTodo}> hehehe </button>
