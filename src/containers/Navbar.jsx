@@ -25,7 +25,7 @@ function Navbar(props) {
 }
 
 const mapStateToProps = (state) => ({
-  dummy: state.message
+  dummy: state.kosasih.message
 })
 
 export default connect(mapStateToProps)(Navbar)

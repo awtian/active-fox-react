@@ -17,8 +17,8 @@ function ManipulatingTitle(props) {
 }
 
 const mapStateToProps = (state) => ({
-  title: state.message,
-  teacher: state.teacher
+  title: state.kosasih.message,
+  teacher: state.kosasih.teacher
 })
 
 const mapDispatchToProps = (dispatch) => ({

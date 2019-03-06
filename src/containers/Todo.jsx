@@ -39,7 +39,7 @@ export default class Todo extends Component {
     const {todos, newTodo} = this.state;
 
     return (
-      <div>
+        <>
         <h2>{this.props.name}</h2>
         <Route exact path="/todo/easter" component={() => <h1>welcome to oasis</h1>} />
         <h1>TodoList</h1>
@@ -50,7 +50,7 @@ export default class Todo extends Component {
               {todos.map(todo => <SingleTodo key={todo.id} todo={todo} del={this.delete} />)}      
           </ul>
         </div>
-      </div>
+        </>
     )
   }
 }

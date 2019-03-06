@@ -14,6 +14,7 @@ import store from './store'
 import Todo from './containers/Todo'
 import Navbar from './containers/Navbar'
 import Manipulate from './containers/ManipulatingTitle'
+import Fetch from './containers/Fetch'
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={() => <h1>Halo ini home</h1>} />
               <Route path="/todo" component={Todo} />
+              <Route path="/fetch" component={Fetch} />
               <Route path="/manipulate" component={Manipulate} />
               <Route exact path="/todorender" render={() => <Todo name="activefox"/>} />
               <Route exact path="/param/:name/:hehe" component={(props) => <h1>halo kamu {props.match.params.name} {props.match.params.hehe} </h1>} />
